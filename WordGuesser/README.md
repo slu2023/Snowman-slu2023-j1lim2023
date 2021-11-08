@@ -98,14 +98,14 @@ TODO: Add Image of flowchart
 Counts the number of times the specified character appears in the word to be
 guessed. The case of the letter specified is ignored.
 
-![Count Letter Flowchart]((../diagrams/AsInteger.png))
+![Count Letter Flowchart](../diagrams/AsInteger.png)
 
 ### GetGuessedLetters()
 
 Returns a string containing each letter that has been guessed in the order that
 they were guessed.
 
-![Get Guessed Letter Flowchart](../diagrams/GetGuessedLetters().png)
+TODO: Add Image of flowchart
 
 ### GetFullWord()
 
