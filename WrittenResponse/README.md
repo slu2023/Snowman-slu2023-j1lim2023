@@ -36,7 +36,7 @@ used to manage complexity in your program.
 The first program code segment must show how data have been stored in the list.
 
 ```csharp
-// TODO: Copy The line of code here for which you are adding data to a list
+this.lettersGuessed.Add(guess[0]);
 ```
 
 ### 3b ii.
@@ -55,8 +55,9 @@ Then provide a written response that does all three of the following:
 
 Identifies the name of the list being used in this response
 
-**TODO: Write, "The list is stored in the variable {INSERT VARIABLE NAME
-HERE}"**
+
+The list is stored in the variable lettersGuessed.
+
 
 ### 3b iv.
 
@@ -70,8 +71,7 @@ Explains how the selected list manages complexity in your program code by
 explaining why your program code could not be written, or how it would be
 written differently, if you did not use the list.
 
-**TODO: Explain why it would be very difficult (or impossible) to write 
-the guessing game without using the list.**
+The list allows us to track all of the guesses the player makes without limiting the number of times the player can guess incorrectly. If we did not use a list, we would need an infinite number of variables to track each guess. In addition, each guess would need many variables to track if there's more than one of the guess in the word, if the player already made the guess, etc. Thus, it is not possible. 
 
 ## 3c.
 
@@ -97,7 +97,7 @@ The first program code segment must be a student-developed procedure that:
 The second program code segment must show where your student-developed procedure is being called in your program.
 
 ```csharp
-// TODO: Add code showing where the procedure is being called
+count = this.CountLetter(guess[0]);
 ```
 
 ### 3c iii.
