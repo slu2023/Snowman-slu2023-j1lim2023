@@ -111,6 +111,15 @@ Describes in general what the identified procedure does and how it contributes t
 Explains in detailed steps how the algorithm implemented in the identified procedure works. Your explanation must be detailed enough for someone else to recreate it.
 
 **TODO: In English, explain step by step what your procedure does. Be sure to use the word `Selection` and `Iteration` to explain what it does.**
+1. Declare integer count
+2. Set count to equal zero
+3. set guess to equal the character ToUpper
+4. checks to see if guess is not a letter
+5. If not a character, select to throw new argument acception and display "Invalid character: {guess}."
+6. checks every character in fullWord to see how many characters of your guess are in fullWord
+7. Based on if your guessed character matches the character in fullWord
+    a) add one to integer count
+8. Finally, iterate through all of the characters in fullWord and print the final count out.
 
 ## 3d
 
