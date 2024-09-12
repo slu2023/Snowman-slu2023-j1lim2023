@@ -4,7 +4,8 @@ The WordGuesser class defines a word guessing game.
 
 ## Authors
 
-TODO: Add your names here
+Lucia Lu
+Janet Lim
 
 ## Member Variables
 
@@ -48,27 +49,27 @@ the number of incorrect guesses that are allowed.
 This method checks if the game has been won. A game is considered won if all of
 the letters in the word to be guessed have been guessed.
 
-TODO: Add Image of flowchart
+![Is Game Won Flowchart](../diagrams/isgamewon.png)
 
 ### IsGameOver()
 
 This method checks if the game has been lost. A game is considered lost if the
 number of incorrect guesses is greater than or equal to the guess limit.
 
-TODO: Add Image of flowchart
+![Is Game Over Flowchart](../diagrams/isgameover.png)
 
 ### GetIncorrectGuesses()
 
 This method returns the number of incorrect guesses that have been made.
 
-TODO: Add Image of flowchart
+![Get Incorrect Guesses Flowchart](../diagrams/getincorrectguesses.png)
 
 ### GetGuessLimit()
 
 This method returns the number of incorrect guesses that can be made before the
 game is over.
 
-TODO: Add Image of flowchart
+![Get Guess Limit Flowchart](../diagrams/getguesslimit.png)
 
 ### CheckGuess(string guess)
 
@@ -90,31 +91,55 @@ and updating the game state as necessary.
 8. If the letter is correct and appears multiple times, returns "There are
    {count} {guess}s".
 
-TODO: Add Image of flowchart
+![Check Guess Flowchart](../diagrams/checkguessstring_guess.png)
 
 ### CountLetter(char guess)
 
 Counts the number of times the specified character appears in the word to be
 guessed. The case of the letter specified is ignored.
 
-TODO: Add Image of flowchart
+Algorithm:
+
+1. Check that `guess` is a letter. If it is not a letter, throw an `ArgumentException`.
+2. Sanitize the `guess` character by making it uppercase.
+3. Initialize an integer to count the number of appearances.
+4. Iterate through every character in the word being guessed.
+   * If it is the guess, increment the count.
+5. After checking every letter, return the count.
+
+![Count Letter Flowchart](../diagrams/AsInteger.png)
 
 ### GetGuessedLetters()
 
 Returns a string containing each letter that has been guessed in the order that
 they were guessed.
 
-TODO: Add Image of flowchart
+Algorithm:
+
+1. Create an empty string that will accumulate the letters that have been guessed.
+2. Iterate through every character that has been guessed
+   * Append the character to the string
+3. Trim the string and return it
+
+![Get Guessed Letter Flowchart](../diagrams/GetGuessedLetters().png)
 
 ### GetFullWord()
 
 Returns the word that is to be guessed without any missing letters.
 
-TODO: Add Image of flowchart
+![Get Full Word Flowchart](../diagrams/getfullword.png)
 
 ### GetWord()
 
 Returns the word that is to be guessed with each letter that has not yet been
 guessed replaced with an underscore.
 
-TODO: Add Image of flowchart
+Algorithm:
+
+1. Create an empty string that will accumulate the word to be displayed.
+2. Iterate through every character in the word to be guessed
+   * If the letter has been guessed (this.guessedLetters.Contains(c)), append the letter to the string
+   * If the letter has not been guessed (else), append an underscore to the string
+3. Trim the string and return it.
+
+![Get Word Flowchart](../diagrams/getword.png)
